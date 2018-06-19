@@ -161,7 +161,7 @@ export default class AutoNumeric {
 
         // Save the initial values (html attribute + element.value) for the pristine test
         this._saveInitialValues(initialValue);
-        
+
         // Setup the data for the persistent storage solution (ie. sessionStorage or cookies)
         this.sessionStorageAvailable = this.constructor._storageTest();
         this.storageNamePrefix = 'AUTO_'; // The prefix for the raw value storage name variable can be modified here
@@ -2028,7 +2028,7 @@ export default class AutoNumeric {
 
             return this;
         }
-        
+
         if (value === '' && this.settings.emptyInputBehavior === AutoNumeric.options.emptyInputBehavior.zero) {
             // Keep the value zero inside the element
             value = 0;
@@ -3843,9 +3843,9 @@ export default class AutoNumeric {
             AutoNumericHelper.throwError(`The show positive sign option 'showPositiveSign' is invalid ; it should be either 'false' or 'true', [${options.showPositiveSign}] given.`);
         }
 
-        if (!AutoNumericHelper.isString(options.suffixText) || (options.suffixText !== '' && (AutoNumericHelper.isNegative(options.suffixText, options.negativeSignCharacter) || testNumericalCharacters.test(options.suffixText)))) {
+        /* if (!AutoNumericHelper.isString(options.suffixText) || (options.suffixText !== '' && (AutoNumericHelper.isNegative(options.suffixText, options.negativeSignCharacter) || testNumericalCharacters.test(options.suffixText)))) {
             AutoNumericHelper.throwError(`The additional suffix option 'suffixText' is invalid ; it should not contains the negative sign '${options.negativeSignCharacter}' nor any numerical characters, [${options.suffixText}] given.`);
-        }
+        } */
 
         if (!AutoNumericHelper.isString(options.negativeSignCharacter) ||
             options.negativeSignCharacter.length !== 1 ||

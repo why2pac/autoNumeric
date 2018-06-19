@@ -9,7 +9,7 @@ test/e2e/reports
 test/e2e/screenshots
 
 # Built files
-dist/*
+# dist/*
 
 # Coverage files
 test/unit/coverage
